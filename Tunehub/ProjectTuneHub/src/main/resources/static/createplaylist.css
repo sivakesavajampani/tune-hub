@@ -1,0 +1,24 @@
+body{
+ 	display : flex;
+	justify-content : center;
+	align-items : center; 
+  /*   text-align: center;  */
+	background-color:black;
+	height: 100vh;
+}
+.container {
+    display: flex;
+    justify-content: center; /* Horizontally centers the box */
+    align-items: center; /* Vertically centers the box */
+    height: 100vh; /* Example height for the container (adjust as needed) */
+}
+.box {
+    width: 250px; /* Set the width of the box */
+    height: 300px; /* Set the height of the box */
+    background-color: white; /* Set the background color of the box */
+    border: 1px solid #000; /* Add a border around the box */
+    padding: 20px; /* Add padding inside the box */
+    box-sizing: border-box; /* Include padding and border in the box's total width and height */
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Playlist</title>
+<link rel="stylesheet" type="text/css" href="/createplaylist.css"></link>
+</head>
+<body>
+<div class="container">
+<div class="box">
+	<form action="addplaylist" method="post">
+		<label>Playlist Name:</label>
+		<input type="text" name="name">
+		<br><br>
+		<div th:each ="song:${songs}">
+	    <input type="checkbox" th:name="songs" th:value="${song.id}">
+	    <label th:text=${song.name}></label>
+		<br> 
+		</div><br> 
+		<input type="submit" value="ADD PLAYLIST">
+	</form>
+	</div>
+	</div>
+</body>
+</html>

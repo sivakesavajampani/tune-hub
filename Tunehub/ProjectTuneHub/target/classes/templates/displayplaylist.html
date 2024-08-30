@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Playlist</title>
+<link rel="stylesheet" type="text/css" href="/displayplaylist.css"></link>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<table border="2" class="table">
+				<thead class="display">
+					<tr>
+						<th>Id</th>
+						<th>Name</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="allplaylists:${playlist}">
+						<td th:text="${allplaylists.id}"></td>
+						<!-- <td th:text="${allplaylists.name}"></td> -->
+						<!-- <td th:text="${allplaylists.songs}"></td> -->
+						<td>
+							<ul>
+								<li th:each="song:${allplaylists.songs}"><span
+									th:text="${song.name}"></span> <audio controls>
+										<source th:src="${song.link}">
+									</audio></li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p>this is your playlist</p>
+	<div th:each="playl:${playlist}">
+	<p th:text="${playl.id}">
+	</div>
+</body>
+</html>  -->
